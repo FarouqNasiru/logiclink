@@ -20,4 +20,4 @@ If you'd like to contribute to this project, you can fork the repository, make y
 
 
 # License
-This project is licensed under the MIT License.hi :)
+This project is licensed under the MIT License.
