@@ -22,6 +22,10 @@ body {
     padding: 20px;
 }
 
+.logic-logo{
+    width: 125px;
+}
+
 nav {
     flex: 1;
     text-align: right;
@@ -63,6 +67,14 @@ p {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.row1 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f9f9f9;
 }
 
 .col-2 {
@@ -142,7 +154,31 @@ p {
     color: #00004d;
 }
 
+
+.title1 {
+    text-align: center;
+    margin: 0 auto 40px;
+    position: relative;
+    line-height: 60px;
+    color: #00004d;
+    background-color: #f9f9f9;
+}
+
 .title::after {
+    content: '';
+    background: #b60000;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
+.title1::after {
     content: '';
     background: #b60000;
     width: 80px;
@@ -545,10 +581,15 @@ p {
     .col-2 h1 {
         font-size: 40px;
         line-height: 60px;
-        margin-top: 0px;
+        margin-top: 80px;
         color: #00004d;
     }
 
+
+
+    .logic-logo{
+        width: 63px;
+    }
 
 
 
