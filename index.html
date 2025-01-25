@@ -3,12 +3,14 @@
     <head>
     <meta charset="UTF-8">
        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>Laptop store</title>
+        <title>Logic Link IT Computer Sales and Repair</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     </head>
     <body>
         
@@ -19,29 +21,31 @@
     <div class="container">
         <div class="navbar">
              <div class="logo">
-               <a href="index.html"> <img src="images/logo.png" width="125px"></a>
+               <a href="index.html"> <img src="images/logic-logo.png" width="125px"></a>
             </div>
             <nav>
                 <ul id="MenuItems">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="Account.html">Login</a></li>
-                    <li><a href="Account.html">Sign up</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html">Services</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                    <!--<li><a href="Account.html">Login</a></li> -->
                     <li><a href="insertproduct.html">Insert product</a></li>
 
                 </ul>
             </nav>
-          <img src="images/cart.svg" width="50px" height="50px"> 
+          <!--<img src="images/cart.svg" width="50px" height="50px"> -->
           <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div> 
          <div class="row">
              <div class="col-2">
-                 <h1>The brand new Asus <br>will change your life!</h1>
+                 <h1>Welcome To <br>LogicLink IT!</h1>
                  <p>
-                     only for 1500 USD!
+                     ...Where Repairs Meet Quality Sales
                  </p>
-                  <a href="" class="btn">Order Now &#8594;</a>
+                  <a href="" class="btn">See More &#8594;</a>
              </div>
-             <div class="col-2">
+             <div class="col-2" id="moving-image">
                  <img src="images/Asusfront.png">
              </div>
 
@@ -53,83 +57,29 @@
     
     
         <!featured categories>
-    <div class="categories">
-      
-       <div class="small-container">
-         
-          <div class="row">
-           <div class="col-3">
-               <img src="images/category-1.webp" >
-           </div>
-           <div class="col-3">
-               <img src="images/category-3.png" > 
-           </div>
-           <div class="col-3">
-               <img src="images/category-2.webp" >
-           </div>
-        </div>
-          
-     </div>
-        
-  </div>
+        <section class="about">
+            <section class="Models">
+                <h2 class="title">Featured Products</h2> 
+                <div class="Scontainer">
+                    <div class="panel active" style="background-image: url('https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                      <h3>APPLE</h3>
+                    </div>
+                    <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                      <h3 style="color: black;">DELL</h3>
+                    </div>
+                    <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1531063626275-e6680b864755?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                      <h3 style="color: black;">ASUS</h3>
+                    </div>
+                    <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1691085475426-d9636c7010b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                      <h3>HP</h3>
+                    </div>
+                    <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1625266008996-67bc5f9ffb40?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                      <h3>MSI</h3>
+                    </div>
+                  </div>
+            </section>
+        </section>
        
-        <!featured products> 
-        
-        <div class="small-container">
-           <h2 class="title">Featured Products</h2> 
-           <div class="row">
-               <div class="col-4">
-                   <img src="images/product-1.webp" >
-                   <h4>Zenbook Pro</h4>
-                   <div class="rating">
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star-o"></i>
-
-                   </div>
-                   <p>1200$</p>
-               </div>
-               <div class="col-4">
-                   <img src="images/product-2.webp" >
-                   <h4>Zenbook Flip</h4>
-                   <div class="rating">
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star-half-o"></i>
-                       <i class="fa fa-star-o"></i>
-
-                   </div>
-                   <p>1500$</p>
-               </div>
-               <div class="col-4">
-                   <img src="images/product-3.webp" >
-                   <h4>Zenbook Fold</h4>
-                   <div class="rating">
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-
-                   </div>
-                   <p>1750$</p>
-               </div>
-               <div class="col-4">
-                   <img src="images/product-4.webp" >
-                   <h4>Zenbook Duo</h4>
-                   <div class="rating">
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star-o"></i>
-
-                   </div>
-                   <p>1300$</p>
-               </div>
                
                
                
@@ -258,53 +208,74 @@
             <div class="small-container">
                 <div class="row">
                     <div class="col-2">
-                        <img src="images/proart.jpg" class="offer-img" >
+                        <img src="images/top_img.png" class="offer-img" >
                     </div>
                     <div class="col-2">
-                        <p>Limited Edition</p>
-                        <h1>ProArt Studiobook</h1>
+                        <p>Who Are We</p>
+                        <h1>About Us</h1>
                         <smal>ProArt StudioBook Pro 17 is one of the world’s slimmest laptops to feature NVIDIA® Quadro® graphics, making it a mighty powerhouse that brings ideas to life. It boasts a slim-bezel NanoEdge display that effectively allows for a larger display to fit into its compact chassis for immersive visuals. Its combination of cutting-edge graphics and portability makes it perfect for creative professionals.</smal><br>
-                        <a href="" class="btn">Buy Now &#8594</a>
+                        <a href="" class="btn">Contact Us &#8594</a>
                     </div>
                 </div>
             </div>
         </div>
         <!------------BRANDS------------>
-        <div class="brands">
-            <div class="small-container">
-                <div class="row">
-                    <div class="col-5">
-                        <img src="images/brand1.png" alt="">
-                    </div>
-                    <div class="col-5">
-                        <img src="images/brand2.png" alt="">
-                    </div>
-                    <div class="col-5">
-                        <img src="images/brand3.png" alt="">
-                    </div>
-                    <div class="col-5">
-                        <img src="images/brand4.png" alt="">
-                    </div>
-                    <div class="col-5">
-                        <img src="images/brand5.png" alt="">
-                    </div>
+
+
+
+        <section id="services">
+            <div class="container1">
+              <h2 class="section-title">Our Services</h2>
+              <div class="services">
+                <div class="service-card">
+                  <i class="service-icon fas fa-laptop"></i>
+                  <h3>Laptop Sales</h3>
+                  <p>We offer a wide range of high-quality laptops for every need and budget. From business to gaming laptops, we have you covered.</p>
                 </div>
+                <div class="service-card">
+                  <i class="service-icon fas fa-wrench"></i>
+                  <h3>Laptop Repair</h3>
+                  <p>Fast and reliable laptop repair services. Whether it's a screen replacement or system troubleshooting, we fix it all.</p>
+                </div>
+                <div class="service-card">
+                  <i class="service-icon fas fa-headphones-alt"></i>
+                  <h3>Sale of Accessories</h3>
+                  <p>Find a variety of laptop accessories, including bags, chargers, and peripherals to enhance your device's performance.</p>
+                </div>
+              </div>
             </div>
-        </div>
+          </section>
+
+          
+
+
+
+
+        <div class="contact-section">
+            <h1>Contact Us</h1>
+            <form action="#" method="POST">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+        
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+        
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+        
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+        
+              <button type="submit">SEND</button>
+            </form>
+          </div>
         <!------------------footer-------------------->
         <div class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col-1">
-                        <h3>Download Our App</h3>
-                        <p>Download App for Android and IOS</p>
-                        <div class="app-logo">
-                            <img src="images/play-store.png">
-                            <img src="images/app-store.png">
-                        </div>
-                    </div>
+                    
                     <div class="footer-col-2">
-                        <img src="images/logo2.png" alt="">
+                        <img src="images/logic-logo.png" alt="">
                         <p>Our goal is to provide you best products with best prices</p>
                     </div>
                     <div class="footer-col-3">
@@ -329,7 +300,7 @@
                     </div>
                 </div>
                 <hr>
-                <p class="copyright">Copyright 2023 Kiarash Rahmani 99463139</p>
+                <p class="copyright">Copyright 2025 THE BRAND</p>
             </div>
         </div>
         
@@ -348,6 +319,42 @@
                     MenuItems.style.maxHeight = "0px";
                 }
             }
+
+
+
+            const panels = document.querySelectorAll('.panel');
+let currentIndex = 0;
+
+// Function to remove active classes
+function removeActiveClasses() {
+    panels.forEach(panel => {
+        panel.classList.remove('active');
+    });
+}
+
+// Function to show the next panel automatically
+function showNextPanel() {
+    removeActiveClasses();
+    panels[currentIndex].classList.add('active');
+    currentIndex = (currentIndex + 1) % panels.length; // Move to the next panel, loop back to the start
+}
+
+// Set up an interval for automatic cycling
+const interval = setInterval(showNextPanel, 3000);
+
+// Add click event to each panel for manual selection
+panels.forEach((panel, index) => {
+    panel.addEventListener('click', () => {
+        clearInterval(interval); // Stop automatic cycling on manual interaction
+        removeActiveClasses();
+        panel.classList.add('active');
+        currentIndex = index; // Update the current index to the clicked panel
+    });
+});
+
+// Initial setup to show the first panel
+showNextPanel();
+
         </script>
         
         
