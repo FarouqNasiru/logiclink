@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
@@ -22,7 +21,7 @@ body {
     padding: 20px;
 }
 
-.logic-logo{
+.logic-logo {
     width: 125px;
 }
 
@@ -241,18 +240,20 @@ small {
 }
 
 .footer {
-    background: #333;
-    color: #8a8a8a;
+    background: linear-gradient(to top, #a1a1f0, #ffffff);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #111;
     font-size: 14px;
     padding: 60px 0 20px;
 }
 
 .footer p {
-    color: #8a8a8a;
+    color: #111;
 }
 
 .footer h3 {
-    color: #fff;
+    color: #00004d;
     margin-bottom: 20px;
 }
 
@@ -274,13 +275,13 @@ small {
 }
 
 .footer-col-2 img {
-    width: 180px;
+    width: 100px;
     margin-bottom: 20px;
 }
 
 .footer-col-3,
 .footer-col-4 {
-    flex-basis: 12%;
+    flex-basis: 40%;
     text-align: center;
 }
 
@@ -518,7 +519,7 @@ button:hover {
 
 .service-icon {
     font-size: 3rem;
-    color: #3498db;
+    color: #00004d;
     margin-bottom: 20px;
 }
 
@@ -537,6 +538,110 @@ p {
     color: #333;
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   /* padding: 20px;*/
+    gap: 20px;
+}
+
+.contact-form {
+    flex: 1 1 40%;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.contact-form button {
+    background-color: #00004d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.image {
+    flex: 1 1 40%;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 
 
 @media only screen and (max-width: 800px) {
@@ -544,7 +649,7 @@ p {
         position: absolute;
         top: 70px;
         left: 0;
-        background: #1b1870;
+        background: #00004d;
         width: 100%;
         overflow: hidden;
         transition: max-height 0.5s;
@@ -568,6 +673,14 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
     .row {
         text-align: center;
     }
@@ -587,7 +700,7 @@ p {
 
 
 
-    .logic-logo{
+    .logic-logo {
         width: 63px;
     }
 
@@ -643,6 +756,19 @@ p {
         flex-direction: column;
         align-items: center;
     }
+
+
+
+
+    .container1 {
+        flex-direction: column;
+    }
+
+    .image {
+        margin-bottom: -10px;
+    }
+
+
 }
 
 
