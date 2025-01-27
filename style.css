@@ -588,7 +588,7 @@ p {
 
 .contact-form {
     flex: 1 1 40%;
-    min-width: 300px;
+    min-width: 262px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -766,6 +766,19 @@ p {
 
     .image {
         margin-bottom: -10px;
+    }
+
+
+
+    .service-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 250px;
+        margin: 15px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
 
