@@ -103,7 +103,14 @@ p {
     transition: background 0.5s;
 }
 
+btn1 {
+    color: #00004d;
+}
+
 .btn:hover {
+    background: grey;
+}
+.btn1:hover:hover {
     background: grey;
 }
 
@@ -151,6 +158,8 @@ p {
     position: relative;
     line-height: 60px;
     color: #00004d;
+
+
 }
 
 
@@ -637,10 +646,129 @@ p {
 
 .image img {
     max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
+
+
+
+
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slides {
+    display: none;
+    width: 100%;
+}
+.fade {
+    animation: fadeEffect 2s ease-in-out infinite;
+}
+@keyframes fadeEffect {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hide elements initially */
+.fade-in, .slide-left, .slide-right, .slide-up, .slide-down {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Slide directions */
+.slide-left {
+    transform: translateX(-50px);
+}
+.slide-right {
+    transform: translateX(50px);
+}
+.slide-up {
+    transform: translateY(50px);
+}
+.slide-down {
+    transform: translateY(-50px);
+}
+
+/* Active state when element is visible */
+.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+
+
+
+
+
+
+.testimonial-container {
+    width: 80%;
+    max-width: 800px;
+    background: #fff;
+    padding: 50px;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+}
+.testimonial {
+    display: none;
+}
+.testimonial.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.testimonial h4 {
+    color: #00004d;
+}
+
+
+.hello1 {
+    color: #00004d;
+}
 
 
 
@@ -780,6 +908,10 @@ p {
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+
+
+    
 
 
 }

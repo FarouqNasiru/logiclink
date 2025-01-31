@@ -28,9 +28,9 @@
                 <nav>
                     <ul id="MenuItems">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html">About</a></li>
-                        <li><a href="index.html">Services</a></li>
-                        <li><a href="index.html">Contact Us</a></li>
+                        <li><a href="#about-us">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
                         <!--<li><a href="Account.html">Login</a></li> -->
                         <!--<li><a href="insertproduct.html">Insert product</a></li>-->
 
@@ -41,14 +41,15 @@
             </div>
             <div class="row">
                 <div class="col-2">
-                    <h1>Welcome To <br>LogicLink IT!</h1>
-                    <p>
+                    <h1 class="slide-down">Welcome To <br>LogicLink IT!</h1>
+                    <p class="slide-up">
                         ...Where Repairs Meet Quality Sales
                     </p>
+                    
                     <a href="#about-us" class="btn">See More &#8594;</a>
                 </div>
                 <div class="col-2" id="moving-image">
-                    <img src="images/Asusfront.png">
+                    <img src="images/Asusfront.png" class="slide-right">
                 </div>
 
             </div>
@@ -81,7 +82,7 @@
                     </div>
                     <div class="panel"
                         style="background-image: url('https://images.unsplash.com/photo-1625266008996-67bc5f9ffb40?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                        <h3>MSI</h3>
+                        <h3>LENOVO</h3>
                     </div>
                 </div>
             </section>
@@ -95,8 +96,13 @@
         <h2 class="title">Latest Products</h2>
         <div class="row1">
             <div class="col-4">
-                <img src="images/product-5.webp">
-                <h4>Vivobook Slate</h4>
+                <div class="slideshow-container" id="slideshow1">
+                    <img class="slides" src="images/hp-pro1.png" alt="Slide 1">
+                    <img class="slides" src="images/hp-pro2.png" alt="Slide 2">
+
+                </div>
+                <h4>HP EliteBook x360 830 G7
+                </h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -105,11 +111,46 @@
                     <i class="fa fa-star-half-o"></i>
 
                 </div>
-                <p>1600$</p>
+                <p>N550,000</p>
+                <a href="#" class="btn1" data-popup="popup1">Read More &#8594</a>
             </div>
+
+
+
+
+            <div id="popup1" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <h2 class="title"><br> HP EliteBook x360 830 G7</h2> <br>
+                    <p class="hello">Intel Core i5 <br>
+                        10th Gen @ 1.6GHz (Boost up to 4.2GHz) <br>
+                        4 Cores, 8 Threads <br>
+                        16GB RAM • 256GB SSD <br>
+                        Keyboard Light 💡<br>
+                        Touchscreen <br>
+                        Fingerprint Scanner <br>
+                        Face ID <br>
+                        Two USB 3.1 ports, One USB-C port, HDMI 1.4b port, MicroSD card reader, Headphone/microphone
+                        combo jack <br>
+                        WINDOWS 11 Pro <br>
+                        13.3” FHD Touchscreen <br>
+                        Up to 12 hours battery life <br>
+
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
             <div class="col-4">
-                <img src="images/product-6.webp">
-                <h4>Chromebook Vibe</h4>
+                <div class="slideshow-container" id="slideshow2">
+                    <img class="slides" src="images/lenovo-1.png" alt="Slide 4">
+                    <img class="slides" src="images/lenovo-2.png" alt="Slide 5">
+
+                </div>
+                <h4>Lenovo ThinkPad T14</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -118,11 +159,40 @@
                     <i class="fa fa-star-o"></i>
 
                 </div>
-                <p>1350$</p>
+                <p>N340,000</p>
+                <a href="#" class="btn1" data-popup="popup2">Read More &#8594</a>
             </div>
+
+            <div id="popup2" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <h2 class="title"><br>Lenovo ThinkPad T14</h2> <br>
+                    <p class="hello">AMD Ryzen 7 PRO @ 1.7GHz (Boost up to 4.4GHz) <br>
+                        8 Cores, 16 Threads <br>
+                        16GB RAM • 256GB SSD <br>
+                        Keyboard Light 💡<br>
+                        Fingerprint Scanner <br>
+                        Two USB-C ports, Two USB 3.2 Gen 1 ports, HDMI 2.0 port, Ethernet port, MicroSD card reader,
+                        Headphone/microphone combo jack <br>
+                        WINDOWS 11 Pro <br>
+                        14” FHD Display <br>
+                        Up to 10 hours battery life <br>
+
+
+                    </p>
+                </div>
+            </div>
+
+
             <div class="col-4">
-                <img src="images/product-7.webp">
-                <h4>Chromebook</h4>
+                <div class="slideshow-container" id="slideshow3">
+                    <img class="slides" src="images/hp-1.png" alt="Slide 1">
+                    <img class="slides" src="images/hp-2.png" alt="Slide 2">
+                    <img class="slides" src="images/hp-3.png" alt="Slide 3">
+
+                </div>
+                <h4>HP ProBook 640 G2
+                </h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -131,11 +201,38 @@
                     <i class="fa fa-star-o"></i>
 
                 </div>
-                <p>1150$</p>
+                <p>N215,000</p>
+                <a href="#" class="btn1" data-popup="popup3">Read More &#8594</a>
             </div>
+
+            <div id="popup3" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <h2 class="title"><br>HP ProBook 640 G2</h2> <br>
+                    <p class="hello">Intel Core i5 @ 2.50GHz <br>
+                        6th Generation (Dual Core; 4 CPU) <br>
+                        8GB RAM • 500GB HDD <br>
+                        Keyboard Light 💡<br>
+                        Fingerprint Scanner <br>
+                        Two USB ports, One Type-C port, VGA port, DisplayPort, Headphone/microphone combo jack <br>
+                        WINDOWS 11 <br>
+                        14” HD Display <br>
+
+
+                    </p>
+                </div>
+            </div>
+
+
+
             <div class="col-4">
-                <img src="images/product-8.webp">
-                <h4>Vivobook Go</h4>
+                <div class="slideshow-container" id="slideshow4">
+                    <img class="slides" src="images/hp-e1.png" alt="Slide 4">
+                    <img class="slides" src="images/hp-e2.png" alt="Slide 5">
+                    <img class="slides" src="images/hp-e3.png" alt="Slide 6">
+                </div>
+                <h4>HP ProBook 435 x360 G7
+                </h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -144,68 +241,35 @@
                     <i class="fa fa-star-o"></i>
 
                 </div>
-                <p>900$</p>
+                <p>N440,000</p>
+                <a href="#" class="btn1" data-popup="popup4">Read More &#8594</a>
             </div>
+
+
+            <div id="popup4" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <h2 class="title"><br>HP ProBook 435 x360 G7</h2> <br>
+                    <p class="hello">AMD Ryzen 5 4500U @ 2.3GHz (Boost up to 4.0GHz) <br>
+                        6 Cores, 6 Threads <br>
+                        8GB RAM • 256GB SSD <br>
+                        Keyboard Light 💡<br>
+                        Touchscreen <br>
+                        Fingerprint Scanner <br>
+                        Face ID <br>
+                        Two USB 3.1 ports, One USB-C port, HDMI 1.4b port, MicroSD card reader, Headphone/microphone
+                        combo jack <br>
+                        WINDOWS 11 Pro <br>
+                        13.3” FHD Touchscreen <br>
+                        Up to 10 hours battery life <br>
+
+                    </p>
+                </div>
+            </div>
+
 
         </div>
-        <div class="row1">
-            <div class="col-4">
-                <img src="images/product-9.webp">
-                <h4>ASUS Zenbook Pro 16X</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
 
-                </div>
-                <p>1100$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product-10.webp">
-                <h4>ASUS Zenbook Pro 14X</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                    <i class="fa fa-star-o"></i>
-
-                </div>
-                <p>1200$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product-11.webp">
-                <h4>Zenbook 14X </h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-
-                </div>
-                <p>1450$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product-12.webp">
-                <h4>ASUS Vivobook 13 Slate </h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-
-                </div>
-                <p>1600$</p>
-            </div>
-
-
-
-
-        </div>
 
 
         </div>
@@ -218,13 +282,13 @@
                         <img src="images/top_img.png" class="offer-img">
                     </div>
                     <div class="col-2">
-                        <p>Who Are We</p>
-                        <h1>About Us</h1>
+                        <p class="slide-left">Who Are We</p>
+                        <h2 class="title">About Us</h2>
                         <p class="hello">Welcome to LogicLink IT – your trusted partner in providing cutting-edge
                             technology solutions, high-quality laptops, and reliable repair services. Founded with a
                             mission to bridge the gap between technology and its users, LogicLink IT has grown into a
                             premier destination for individuals, students, professionals, and businesses seeking
-                            reliable IT products and services. <br>
+                            reliable IT products and services. <br> <b>Crypto payments are also Accepted.</b>
                             <b>Who We Are</b> <br>
                             At LogicLink IT, we specialize in the sales and repair of laptops, offering a wide range of
                             high-performance devices tailored to meet the needs of every customer. Whether you’re a
@@ -232,13 +296,13 @@
                             device, or a business seeking bulk orders, we’ve got you covered.
 
                         </p><br>
-                        <a href="#" class="btn" id="popupLink">Read More &#8594</a>
+                        <a href="#" class="btn" data-popup="popup9">Read More &#8594</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="popupBox" class="popup">
+        <div id="popup9" class="popup">
             <div class="popup-content">
                 <span class="close">&times;</span>
                 <h2 class="title">About Us</h2> <br>
@@ -246,7 +310,7 @@
                     technology solutions, high-quality laptops, and reliable repair services. Founded with a
                     mission to bridge the gap between technology and its users, LogicLink IT has grown into a
                     premier destination for individuals, students, professionals, and businesses seeking
-                    reliable IT products and services. <br><br>
+                    reliable IT products and services. <br><br> Crypto payments are also Accepted.
                     <b>Who We Are</b> <br>
                     At LogicLink IT, we specialize in the sales and repair of laptops, offering a wide range of
                     high-performance devices tailored to meet the needs of every customer. Whether you’re a
@@ -322,12 +386,51 @@
 
 
 
+        <h2 class="title" style="padding-top: 50px;">Testimonials</h2>
+
+        <div class="testimonial-container">
+            <div class="testimonial active">
+                <img src="images/farouq.png" alt="Reviewer 1" class="slide-up">
+                <p class="hello">"Fantastic service and very good laptop in excellent working condition.
+                    I'm very happy!!"</p>
+                <h4>- Farouq Nasiru</h4>
+            </div>
+            <div class="testimonial">
+                <img src="images/male.png" alt="Reviewer 2" class="slide-up">
+                <p class="hello">"So Glad I Got my Laptop From Logic No Issues Battery life,Everything in
+                    Perfect Condition"</p>
+                <h4>- Uloko David</h4>
+            </div>
+            <div class="testimonial">
+                <img src="images/male.png" alt="Reviewer 3" class="slide-up">
+                <p class="hello">"Awesome seller. Got the M1 MacBook Air shipped to Enugu via GIGM (Pay on delivery). It
+                    was a pleasure doing business with him. Dependable and straightforward."</p>
+                <h4>- Increase Divine Wisdom</h4>
+            </div>
+            <div class="testimonial">
+                <img src="images/male.png" alt="Reviewer 4" class="slide-up">
+                <p class="hello">"Very nice and smooth deal. The laptop gotten was neat and in perfect condition.
+                    Very affordable too"</p>
+                <h4>- Olasoji Kola</h4>
+            </div>
+            <div class="testimonial">
+                <img src="images/male.png" alt="Reviewer 5" class="slide-up">
+                <p class="hello">"A trustworthy person, transaction was smooth and successful. I'll recommend
+                    him a million times"</p>
+                <h4>- Sherif Adams</h4>
+            </div>
+        </div>
+        <p class=hello1 style="text-align: right; padding: 20px; margin-bottom: 50px;"><a
+                href="https://jiji.ng/opinions/2P3FQb9FvteeORU2AqoTp4gX" style="color: #00004d;">SEE MORE &#8594;</a></p>
 
 
 
-        <div class="container1">
+
+
+
+        <div class="container1" id="contact-us">
             <div class="image">
-                <img src="images/Asusinsert.webp" alt="Placeholder Image">
+                <img src="images/Asusinsert.webp" alt="Placeholder Image" class="slide-down">
             </div>
             <div class="contact-form">
                 <h2 class="title">Contact Us</h2>
@@ -391,6 +494,68 @@
 
 
         <script>
+
+
+
+            let index = 0;
+            const testimonials = document.querySelectorAll('.testimonial');
+            function showNextTestimonial() {
+                testimonials[index].classList.remove('active');
+                index = (index + 1) % testimonials.length;
+                testimonials[index].classList.add('active');
+            }
+            setInterval(showNextTestimonial, 3000);
+
+
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const elements = document.querySelectorAll(".fade-in, .slide-left, .slide-right, .slide-up, .slide-down");
+
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                elements.forEach(element => {
+                    observer.observe(element);
+                });
+            });
+
+
+
+
+
+
+
+
+
+            function startSlideshow(slideshowId, interval = 3000) {
+                let slides = document.querySelectorAll(`#${slideshowId} .slides`);
+                let index = 0;
+
+                function showSlides() {
+                    slides.forEach(slide => slide.style.display = "none");
+                    slides[index].style.display = "block";
+                    index = (index + 1) % slides.length;
+                }
+
+                showSlides();
+                setInterval(showSlides, interval);
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                startSlideshow("slideshow1");
+                startSlideshow("slideshow2");
+                startSlideshow("slideshow3");
+                startSlideshow("slideshow4");
+                startSlideshow("slideshow5");
+            });
+
+
             var MenuItems = document.getElementById("MenuItems");
             MenuItems.style.maxHeight = "0px";
             function menutoggle() {
@@ -440,32 +605,39 @@
 
 
 
-            // Get the popup box
-            var popupBox = document.getElementById("popupBox");
+            // Ensure the DOM is fully loaded before running the script
+            document.addEventListener("DOMContentLoaded", function () {
+                // Get all popup links and close buttons
+                var popupLinks = document.querySelectorAll("[data-popup]"); // Selects all elements with data-popup attribute
 
-            // Get the link that opens the popup
-            var popupLink = document.getElementById("popupLink");
+                popupLinks.forEach(function (popupLink) {
+                    popupLink.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        var popupId = popupLink.getAttribute("data-popup"); // Get the target popup ID
+                        var popupBox = document.getElementById(popupId); // Find the corresponding popup
 
-            // Get the <span> element that closes the popup
-            var closeBtn = document.getElementsByClassName("close")[0];
+                        if (popupBox) {
+                            popupBox.style.display = "block";
 
-            // When the user clicks on the link, open the popup
-            popupLink.onclick = function (event) {
-                event.preventDefault();
-                popupBox.style.display = "block";
-            }
+                            // Find the close button inside this popup
+                            var closeBtn = popupBox.querySelector(".close");
+                            if (closeBtn) {
+                                closeBtn.addEventListener("click", function () {
+                                    popupBox.style.display = "none";
+                                });
+                            }
 
-            // When the user clicks on <span> (x), close the popup
-            closeBtn.onclick = function () {
-                popupBox.style.display = "none";
-            }
+                            // Close popup when clicking outside of it
+                            window.addEventListener("click", function (event) {
+                                if (event.target === popupBox) {
+                                    popupBox.style.display = "none";
+                                }
+                            });
+                        }
+                    });
+                });
+            });
 
-            // When the user clicks anywhere outside of the popup, close it
-            window.onclick = function (event) {
-                if (event.target == popupBox) {
-                    popupBox.style.display = "none";
-                }
-            }
         </script>
 
 
