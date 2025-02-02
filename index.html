@@ -12,6 +12,158 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
+
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+        import { signInWithRedirect } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyD6YxgJNVzbj5BJJWuhShP6jA5drD3XNGA",
+            authDomain: "logiclinkit-7ce9e.firebaseapp.com",
+            projectId: "logiclinkit-7ce9e",
+            messagingSenderId: "314635646730",
+            appId: "1:314635646730:web:172162922b29ab6a06ecf3"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const loginBtn = document.getElementById("loginBtn");
+            const logoutBtn = document.getElementById("logoutBtn");
+            const dashboard = document.getElementById("dashboard");
+            const productName = document.getElementById("productName");
+            const productImage = document.getElementById("productImage");
+            const productPrice = document.getElementById("productPrice");
+            const productDescription = document.getElementById("productDescription");
+            const addProductBtn = document.getElementById("addProduct");
+            const productList = document.getElementById("productList");
+            const productsSection = document.getElementById("products");
+
+            onAuthStateChanged(auth, user => {
+                if (user) {
+                    loginBtn.style.display = "none";
+                    logoutBtn.style.display = "block";
+                    dashboard.style.display = "block";
+                } else {
+                    loginBtn.style.display = "block";
+                    logoutBtn.style.display = "none";
+                    dashboard.style.display = "none";
+                }
+            });
+
+            loginBtn.addEventListener("click", async () => {
+                try {
+                    const provider = new GoogleAuthProvider();
+                    await signInWithPopup(auth, provider);
+                } catch (error) {
+                    console.error("Login Error:", error);
+                    alert("Popup blocked. Please enable pop-ups or try again.");
+                }
+            });
+
+            logoutBtn.addEventListener("click", async () => {
+                try {
+                    await signOut(auth);
+                } catch (error) {
+                    console.error("Logout Error:", error);
+                }
+            });
+
+            addProductBtn.addEventListener("click", async () => {
+                const name = productName.value;
+                const file = productImage.files[0];
+                const price = productPrice.value;
+                const description = productDescription.value;
+
+                if (name && file && price && description) {
+                    const reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onloadend = async function () {
+                        const base64String = reader.result;
+                        try {
+                            await addDoc(collection(db, "products"), {
+                                name,
+                                image: base64String,
+                                price,
+                                description
+                            });
+                            alert("Product added!");
+                            productName.value = "";
+                            productImage.value = "";
+                            loadProducts();
+                        } catch (error) {
+                            console.error("Error adding product: ", error);
+                        }
+                    };
+                }
+            });
+
+            async function loadProducts() {
+                const productsSection = document.getElementById("products");
+                const productList = document.getElementById("productList");
+                productsSection.innerHTML = "";
+                productList.innerHTML = "";
+
+                const querySnapshot = await getDocs(collection(db, "products"));
+                querySnapshot.forEach(doc => {
+                    const data = doc.data();
+                    const productId = doc.id; // Get document ID for deletion
+
+                    // Create product card
+                    const productDiv = document.createElement("div");
+                    productDiv.classList.add("col-4");
+                    productDiv.innerHTML = `
+            <img src="${data.image}" class="single-image" alt="Product Image">
+            <h4>${data.name}</h4>
+            <p>N${data.price}</p>
+            <p class="hello">${data.description}</p>
+             <a href="#" class="btn1">Know More &#8594</a>
+                 
+               
+           
+        `;
+                    productsSection.appendChild(productDiv);
+
+                    // Add product to the dashboard list
+                    const productItem = document.createElement("li");
+                    productItem.innerHTML = `
+            ${data.name} 
+            <button class="delete-btn" data-id="${productId}">❌</button>
+        `;
+                    productList.appendChild(productItem);
+                });
+
+                // Add event listeners for delete buttons
+                document.querySelectorAll(".delete-btn").forEach(button => {
+                    button.addEventListener("click", async (e) => {
+                        const productId = e.target.dataset.id;
+                        if (confirm("Are you sure you want to delete this product?")) {
+                            await deleteDoc(doc(db, "products", productId));
+                            alert("Product deleted successfully!");
+                            loadProducts(); // Refresh the product list
+                        }
+                    });
+                });
+            }
+
+
+            loadProducts();
+        });
+    </script>
+
+
+
+
+
+
+
 </head>
 
 <body>
@@ -32,8 +184,8 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#contact-us">Contact Us</a></li>
                         <!--<li><a href="Account.html">Login</a></li> -->
-                        <!--<li><a href="insertproduct.html">Insert product</a></li>-->
-
+                        <li><a id="loginBtn">Insert product</a></li>
+                        <button id="logoutBtn" style="display:none;">Logout</button>
                     </ul>
                 </nav>
                 <!--<img src="images/cart.svg" width="50px" height="50px"> -->
@@ -45,7 +197,7 @@
                     <p class="slide-up">
                         ...Where Repairs Meet Quality Sales
                     </p>
-                    
+
                     <a href="#about-us" class="btn">See More &#8594;</a>
                 </div>
                 <div class="col-2" id="moving-image">
@@ -57,6 +209,19 @@
         </div>
 
     </div>
+
+
+
+
+    <section id="dashboard" style="display:none;">
+        <h2>Owner's Dashboard</h2>
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="text" id="productPrice" placeholder="Price">
+        <input type="text" id="productDescription" placeholder="Description">
+        <input type="file" id="productImage">
+        <button id="addProduct">Add Product</button>
+        <ul id="productList"></ul>
+    </section>
 
 
     <!featured categories>
@@ -92,10 +257,15 @@
 
 
 
-        </div>
+
         <h2 class="title">Latest Products</h2>
         <div class="row1">
             <div class="col-4">
+                <section id="products">
+                </section>
+            </div>
+        </div>
+        <!-- <div class="col-4">
                 <div class="slideshow-container" id="slideshow1">
                     <img class="slides" src="images/hp-pro1.png" alt="Slide 1">
                     <img class="slides" src="images/hp-pro2.png" alt="Slide 2">
@@ -265,14 +435,14 @@
 
                     </p>
                 </div>
-            </div>
-
-
-        </div>
+            </div>-->
 
 
 
-        </div>
+
+
+
+
         <!---------------------OFFER--------------------->
 
         <div class="offer" id="about-us">
@@ -421,7 +591,8 @@
             </div>
         </div>
         <p class=hello1 style="text-align: right; padding: 20px; margin-bottom: 50px;"><a
-                href="https://jiji.ng/opinions/2P3FQb9FvteeORU2AqoTp4gX" style="color: #00004d;">SEE MORE &#8594;</a></p>
+                href="https://jiji.ng/opinions/2P3FQb9FvteeORU2AqoTp4gX" style="color: #00004d;">SEE MORE &#8594;</a>
+        </p>
 
 
 
@@ -470,7 +641,8 @@
                         <p>
                         <ul>
                             <li>Phone/WhatsApp: 090-3166-8295</li>
-                            <li>Instagram: @LogicLinkIT</li>
+                            <li>Instagram: <a href="https://www.instagram.com/logiclink_it?igsh=MWIzZ245ZmVteTh0aA==">
+                                    @LogicLinkIT</li></a>
                             <li>Email: Logiclinkit@gmail.com</li>
                         </ul>
                         </p>
@@ -479,7 +651,7 @@
 
                 </div>
                 <hr>
-                <p class="copyright">Copyright 2025 THE BRAND</p>
+                <p class="copyright">2025 Designed by THE BRAND</p>
             </div>
         </div>
 
